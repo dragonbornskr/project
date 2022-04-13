@@ -1,0 +1,256 @@
+*Write a program to lexicographically arrange the given strings "Raman" , "Aman" , "Vikram" , "Shyam" and "Bhuvan".
+
+package practice.sk;
+import java.util.Arrays;
+
+public class StringSort {
+
+	public static void main(String[] args) {
+		String s[] = {"Raman" , "Aman" , "Vikram" , "Shyam", "Bhuvan"};
+		Arrays.sort(s);
+		for(String s1:s) {
+			System.out.print(s1 + " ");
+		}
+	}
+
+}
+
+===========================================================================
+
+*Write a program to demonstrate boxing and un-boxing
+
+package practice.sk;
+
+public class BoxingUnboxing {
+
+	public static void main(String[] args) {
+		
+		//boxing
+        Integer objInteger = Integer.valueOf(10);
+        //un-boxing
+        int a = objInteger.intValue();
+
+        System.out.println(a);
+	}
+
+}
+
+===========================================================================
+
+*Write a program to demonstrate autoboxing and unboxing.
+
+package practice.sk;
+
+public class AutoboxingUnboxing {
+
+	public static void main(String[] args) {
+
+        Integer objInteger = 10;
+        int a = objInteger;
+
+        System.out.println(a);
+	}
+}
+
+==============================================================================
+
+
+*Write a program to display the length and capacity of String, StringBuilder and StringBuffer.
+
+package practice.sk;
+
+public class LengthAndCapacity {
+
+	public static void main(String[] args) {
+		
+		StringBuilder s = new StringBuilder("Hello!! Welcome to Java World");
+		System.out.println(s);
+		
+		System.out.println("\nLength of the String: " + s.length());
+		System.out.println("Capacity of the String: " + s.capacity());
+
+	}
+
+}
+
+===========================================================================
+
+*Write a program to check whether two given strings contains same set of characters as well as having same length.
+
+package practice.sk;
+
+
+public class StringCompare {
+	
+    public static void main(String[] args) {
+        String s1 = "amar";
+        String s2 = "rama";
+        StringCompare obj = new StringCompare();
+        if(obj.checkStrings(s1,s2)){
+            System.out.println("Both contains same characters");
+        }
+        else {
+            System.out.println("Both contains different characters");
+        }
+
+
+
+    }
+
+    public boolean checkStrings(String s1, String s2) {
+        boolean response = true;
+        if(s1.length() == s2.length()){
+            for (int i = 0; i < s2.length() ; i++) {
+                if(s1.contains(""+ s2.charAt(i))){
+                   continue;
+                }
+                else{
+                    response = false;
+                    break;
+                }
+            }
+
+        }
+        else{
+            response = false;
+        }
+
+        return response;
+    }
+}
+
+===========================================================================
+
+
+*Create a List & Set of 10 integers and demonstrate ordered and unordered collection as well as duplicate allowed and not allowed. Demonstrate addAll() method also.
+
+package practice.sk;
+import java.util.*;
+
+public class ListAndSet {
+
+	public static void main(String[] args) {
+		
+		List<Integer> n1 = new ArrayList<>();
+		n1.add(5);
+		n1.add(9);
+		n1.add(2);
+		n1.add(4);
+		n1.add(16);
+		n1.add(3);
+		n1.add(11);
+		n1.add(23);
+		n1.add(34);
+		n1.add(26);
+		System.out.println("List: " + n1);
+		
+		n1.add(4);
+		n1.add(26);
+		System.out.println("In list Duplicate allowed: " + n1);
+		
+		Set<Integer> n2 = new HashSet<>();
+		n2.add(7);
+		n2.add(6);
+		n2.add(9);
+		n2.add(3);
+		n2.add(14);
+		n2.add(21);
+		n2.add(5);
+		n2.add(8);
+		n2.add(12);
+		n2.add(24);
+		System.out.println("\nSet: " + n2);
+		
+		n2.add(3);
+		n2.add(5);
+		n2.add(8);
+		System.out.println("In Set Duplicate are ignored: " + n2);
+		
+		n2.addAll(n1);
+		System.out.println("\nAfter adding to set: " + n2);
+		
+		n1.addAll(n2);
+		System.out.println("\nAfter adding to list: " + n1);
+		
+	}
+
+}
+
+===========================================================================
+
+*Create a List of 10 Integer objects and try to access 15th index. Properly analysis the output.
+
+package practice.sk;
+import java.util.*;
+
+public class ListIndex {
+
+	public static void main(String[] args) {
+		List<Integer> n1 = new ArrayList<>();
+		n1.add(5);
+		n1.add(9);
+		n1.add(2);
+		n1.add(4);
+		n1.add(16);
+		n1.add(3);
+		n1.add(11);
+		n1.add(23);
+		n1.add(34);
+		n1.add(26);
+		System.out.println(n1);
+		
+		System.out.println("\n" + n1.get(4));
+		System.out.println("\n" + n1.get(15));
+		
+
+	}
+
+}
+
+===========================================================================
+
+
+*Write a program to get a substring of a StringBuffer.
+
+package practice.sk;
+
+public class Substring {
+
+	public static void main(String[] args) {
+		
+		StringBuilder s = new StringBuilder("Hello!! Welcome to Java World");
+		System.out.println(s);
+		
+		System.out.println("\nSubstring: " + s.substring(5, 19));
+
+	}
+
+}
+
+===========================================================================
+
+*Create objects of all the wrapper classes and print then on console, with using constructor.
+
+package practice.sk;
+
+public class Wrapper {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Integer myInt = 10;
+	    Double myDouble = 11.65;
+	    Character myChar = 'T';
+	    Boolean myBool= true;
+	    System.out.println(myInt);
+	    System.out.println(myDouble);
+	    System.out.println(myChar);
+	    System.out.println(myBool);
+
+	}
+
+}
+
+===========================================================================
+
+
+
